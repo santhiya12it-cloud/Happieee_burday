@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background Images Layer -->
+    <div class="background-images"></div>
+
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container"></div>
+
+    <!-- Sparkles -->
+    <div class="sparkles-container"></div>
+
+    <!-- Main Container -->
+    <div class="container" id="mainContainer">
+        <!-- Birthday Header -->
+        <div class="header-section">
+            <div class="date-badge">
+                <span class="date-number">24</span>
+                <span class="date-separator">.</span>
+                <span class="date-number">02</span>
+                <span class="date-separator">.</span>
+                <span class="date-number">2026</span>
+            </div>
+            <h1 class="main-title">
+                😍<span class="title-line">Happy</span>
+                <span class="title-line">Birthday</span>👻
+            </h1>
+            <h2 class="subtitle">
+                <span class="darling-text">Darling</span>
+                <span class="heart-beat">❤️</span>
+            </h2>
+            <div class="celebration-particles"></div>
+        </div>
+
+        <!-- Photo Gallery -->
+        <div class="gallery-section">
+            <div class="photo-frame">
+                <div class="photo-container">
+                    <img id="mainPhoto" src="images/image4.png" alt="Our Memories" class="main-photo">
+                    <div class="photo-overlay">
+                        <div class="photo-counter">
+                            <span id="photoNumber">1</span> / <span id="totalPhotos">5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-nav">
+                    <button class="nav-btn prev-btn" onclick="changePhoto(-1)">❮</button>
+                    <button class="nav-btn next-btn" onclick="changePhoto(1)">❯</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Messages Section with Fixed Alignment -->
+        <div class="messages-section">
+            <div class="messages-wrapper">
+                <div class="message-card message-left active" id="message1">
+                    <p class="message-text">💖 You are my sunshine, my everything 🌟</p>
+                    <div class="message-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                <div class="message-card message-right" id="message2">
+                    <p class="message-text">🫶 Thank you for being the most amazing person in my life ❤️</p>
+                    <div class="message-dots">
+                        <span class="dot"></span>
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                <div class="message-card message-left" id="message3">
+                    <p class="message-text">💕 Your love has transformed my world in the most beautiful way ✨</p>
+                    <div class="message-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                <div class="message-card message-right" id="message4">
+                    <p class="message-text">🌹 Every day I fall in love with you all over again 💝</p>
+                    <div class="message-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot active"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Like Button -->
+        <div class="like-button-container">
+            <button class="like-button" id="likeButton" onclick="openGallery()">
+                <span class="like-icon">❤️</span>
+                <span class="like-text">Click to See Our Memories</span>
+            </button>
+        </div>
+
+        <!-- Special Message Card -->
+        <div class="special-message-card">
+            <div class="special-card-content">
+                <div class="special-card-icon">💌</div>
+                <h3 class="special-card-title">A Special Message For You</h3>
+                <p class="special-card-text">
+                    On this special day, I want you to know how much you mean to me.
+                    Every moment with you is a gift, and I'm grateful for every smile,
+                    every laugh, and every memory we've created together.
+                    You are my sunshine, my everything, and I love you more than words can express!
+                    Happy Birthday, my love! 💝
+                </p>
+                <div class="special-card-hearts">💖✨💕🌟💝</div>
+            </div>
+        </div>
+
+        <!-- Love Letter Section -->
+        <div class="love-letter-section">
+            <div class="love-letter-container">
+                <div class="letter-envelope" onclick="openLetter()">
+                    <div class="envelope-flap"></div>
+                    <div class="letter-paper">
+                        <span class="letter-icon">💌</span>
+                        <p class="letter-hint">Click to open my heart...</p>
+                    </div>
+                </div>
+                <div class="love-letter-content" id="loveLetter">
+                    <div class="letter-header">
+                        <h3 class="letter-title">My Dearest Love,</h3>
+                        <div class="letter-date">Today & Forever</div>
+                    </div>
+                    <div class="letter-body">
+                        <p class="letter-paragraph">
+                            As I sit here thinking about you, my heart overflows with emotions I can barely contain.
+                            You've changed my world in ways I never imagined possible. Every day with you feels like
+                            a beautiful dream I never want to wake up from.
+                        </p>
+                        <p class="letter-paragraph">
+                            Your smile lights up my darkest days. Your laugh is the melody that plays in my heart.
+                            Your presence makes everything better, and your absence makes me realize how incomplete
+                            I was before you came into my life.
+                        </p>
+                        <p class="letter-paragraph">
+                            I love the way you care, the way you love, the way you make me feel like I'm the most
+                            important person in the world. I love your quirks, your dreams, your everything.
+                            You are perfect to me, not despite your imperfections, but because of them.
+                        </p>
+                        <p class="letter-paragraph">
+                            On this special day, I want you to know that you are loved beyond measure. You are
+                            cherished,
+                            adored, and treasured. You are my today, my tomorrow, and all my forever.
+                        </p>
+                        <p class="letter-signature">
+                            Forever yours,<br>
+                            <span class="signature-name">With all my love ❤️</span>
+                        </p>
+                    </div>
+                    <button class="close-letter-btn" onclick="closeLetter()">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reasons I Love You Section -->
+        <div class="reasons-section">
+            <div class="reasons-container">
+                <h3 class="reasons-title">💕 Reasons Why I Love You 💕</h3>
+                <div class="reasons-grid" id="reasonsGrid">
+                    <div class="reason-card" data-reason="1">
+                        <div class="reason-icon">✨</div>
+                        <p class="reason-text">Your smile that lights up my entire world</p>
+                    </div>
+                    <div class="reason-card" data-reason="2">
+                        <div class="reason-icon">💖</div>
+                        <p class="reason-text">The way you make me feel like I'm home</p>
+                    </div>
+                    <div class="reason-card" data-reason="3">
+                        <div class="reason-icon">🌟</div>
+                        <p class="reason-text">Your kindness that touches everyone around you</p>
+                    </div>
+                    <div class="reason-card" data-reason="4">
+                        <div class="reason-icon">🫶</div>
+                        <p class="reason-text">How you understand me without words</p>
+                    </div>
+                    <div class="reason-card" data-reason="5">
+                        <div class="reason-icon">💝</div>
+                        <p class="reason-text">The way you love with your whole heart</p>
+                    </div>
+                    <div class="reason-card" data-reason="6">
+                        <div class="reason-icon">🌹</div>
+                        <p class="reason-text">Your beautiful soul that shines so bright</p>
+                    </div>
+                    <div class="reason-card" data-reason="7">
+                        <div class="reason-icon">💕</div>
+                        <p class="reason-text">Every little thing that makes you uniquely you</p>
+                    </div>
+                    <div class="reason-card" data-reason="8">
+                        <div class="reason-icon">❤️</div>
+                        <p class="reason-text">The way you make every day feel special</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Journey Timeline -->
+        <div class="journey-section">
+            <div class="journey-container">
+                <h3 class="journey-title">🌟 Our Beautiful Journey Together 🌟</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">The Beginning</div>
+                            <div class="timeline-text">The moment I knew you were special 💫</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">First Laugh</div>
+                            <div class="timeline-text">When your laughter became my favorite sound 😊</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Growing Closer</div>
+                            <div class="timeline-text">Every moment that brought us closer together 💕</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Today</div>
+                            <div class="timeline-text">Celebrating you and all the love we share 🎉</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Forever</div>
+                            <div class="timeline-text">All the beautiful tomorrows waiting for us ✨</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Days Together Counter -->
+        <div class="counter-section">
+            <div class="counter-container">
+                <h3 class="counter-title">💖 Every Day With You Is A Blessing 💖</h3>
+                <div class="counter-display">
+                    <div class="counter-item">
+                        <div class="counter-number" id="daysCounter">∞</div>
+                        <div class="counter-label">Days of Love</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-number" id="momentsCounter">∞</div>
+                        <div class="counter-label">Beautiful Moments</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-number" id="smilesCounter">∞</div>
+                        <div class="counter-label">Smiles Shared</div>
+                    </div>
+                </div>
+                <p class="counter-message">And counting... because every moment with you is precious 💕</p>
+            </div>
+        </div>
+
+        <!-- QR Code Section for Song -->
+        <div class="qr-section">
+            <div class="qr-container">
+                <h3 class="qr-title">🎵 Scan to Listen to Our Song 🎵</h3>
+                <div class="qr-code-wrapper">
+                    <div id="qrCode" class="qr-code"></div>
+                    <div class="qr-shine"></div>
+                </div>
+                <p class="qr-text">Scan with your phone camera</p>
+                <button class="qr-play-button" onclick="playSong()">
+                    <span>▶️</span> Play Song Directly
+                </button>
+            </div>
+        </div>
+
+        <!-- Video Dedication Section -->
+        <!-- 
+        <div class="video-section">
+            <div class="video-container">
+                <h3 class="video-title">🎬 A Special Video For You 🎬</h3>
+                <div class="video-wrapper">
+                    <div class="video-placeholder" id="videoPlaceholder">
+                        <div class="video-play-icon" onclick="playVideo()">▶️</div>
+                        <p class="video-text">Click to watch your birthday video</p>
+                    </div>
+                    <video id="birthdayVideo" class="birthday-video" controls style="display: none;">
+                        <source src="video/birthday-video.mp4" type="video/mp4">
+                        <source src="video/birthday-video.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p class="video-caption">Made with all my love for you 💕</p>
+            </div>
+        </div>
+        -->
+
+        <!-- Birthday Cake Animation -->
+        <div class="cake-container">
+            <div class="cake">
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pickup Lines Section -->
+        <div class="pickup-lines-section">
+            <div class="pickup-header">
+                <h3 class="pickup-title">💕 Some Lines Just For You 💕</h3>
+            </div>
+            <div class="pickup-lines-container">
+                <div class="pickup-line-card active">
+                    <p class="pickup-text">"Are you a magician? Because whenever I look at you, everyone else
+                        disappears." ✨</p>
+                </div>
+                <div class="pickup-line-card">
+                    <p class="pickup-text">"Do you have a map? I keep getting lost in your eyes." 🗺️</p>
+                </div>
+                <div class="pickup-line-card">
+                    <p class="pickup-text">"If you were a vegetable, you'd be a 'cute-cumber'." 🥒</p>
+                </div>
+                <div class="pickup-line-card">
+                    <p class="pickup-text">"Are you a camera? Because every time I look at you, I smile." 📸</p>
+                </div>
+                <div class="pickup-line-card">
+                    <p class="pickup-text">"Do you believe in love at first sight, or should I walk by again?" 😉</p>
+                </div>
+                <div class="pickup-line-card">
+                    <p class="pickup-text">"You must be made of stars, because you're out of this world." ⭐</p>
+                </div>
+                <div class="pickup-line-card">
+                    <p class="pickup-text">"If beauty were time, you'd be eternity." ⏰</p>
+                </div>
+                <div class="pickup-line-card">
+                    <p class="pickup-text">"You're so beautiful that you made me forget my pickup line." 💖</p>
+                </div>
+            </div>
+            <div class="pickup-dots">
+                <span class="pickup-dot active"></span>
+                <span class="pickup-dot"></span>
+                <span class="pickup-dot"></span>
+                <span class="pickup-dot"></span>
+                <span class="pickup-dot"></span>
+                <span class="pickup-dot"></span>
+                <span class="pickup-dot"></span>
+                <span class="pickup-dot"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Gallery Modal -->
+    <div class="gallery-modal" id="galleryModal">
+        <button class="close-gallery" onclick="closeGallery()">✕</button>
+        <div class="gallery-header">
+            <h2 class="gallery-title">Our Beautiful Memories Together 💕</h2>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Gallery items will be generated by JavaScript -->
+        </div>
+        <div class="gallery-lightbox" id="galleryLightbox">
+            <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+            <button class="lightbox-prev" onclick="changeGalleryPhoto(-1)">❮</button>
+            <button class="lightbox-next" onclick="changeGalleryPhoto(1)">❯</button>
+            <div class="lightbox-content">
+                <img id="lightboxImage" src="" alt="Memory">
+                <div class="lightbox-caption" id="lightboxCaption"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Container -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
